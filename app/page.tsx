@@ -5,13 +5,18 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 const Home = () => {
   return (
-    <div className="w-full max-w-5xl px-10">
+    <div className="w-full flex flex-col items-center">
       <Navbar />
-      <main className="mb-[15em]">
+      <main className="w-full max-w-5xl px-5 lg:px-10 mb-[15em]">
         <header className="mt-[8em]">
           <h2 className="uppercase text-2xl">Fullstack</h2>
           <h1 className="uppercase text-4xl mb-4">Software-Engineer</h1>
           <SocialLinkList />
+          <div className="mt-10">
+            <a href="#contact">
+              <button className="border p-3 rounded-xl uppercase transition-all duration-200 hover:scale-110">Contact me</button>
+            </a>
+          </div>
         </header>
         <div className="mt-[15em]">
           <SectionHeader id="about">About</SectionHeader>
