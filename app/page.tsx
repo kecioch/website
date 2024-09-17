@@ -10,23 +10,23 @@ const Home = () => {
       <main className="mb-[15em]">
         <header className="mt-[8em]">
           <h2 className="uppercase text-2xl">Fullstack</h2>
-          <h1 className="uppercase text-4xl mb-8">Software-Engineer</h1>
+          <h1 className="uppercase text-4xl mb-4">Software-Engineer</h1>
           <SocialLinkList />
         </header>
         <div className="mt-[15em]">
-          <SectionHeader>About</SectionHeader>
+          <SectionHeader id="about">About</SectionHeader>
         </div>
         <div className="mt-[15em]">
-          <SectionHeader>Projects</SectionHeader>
+          <SectionHeader id="projects">Projects</SectionHeader>
         </div>
         <div className="mt-[15em]">
-          <SectionHeader>Skills</SectionHeader>
+          <SectionHeader id="skills">Skills</SectionHeader>
         </div>
         <div className="mt-[15em]">
-          <SectionHeader>Experience</SectionHeader>
+          <SectionHeader id="experience">Experience</SectionHeader>
         </div>
         <div className="mt-[15em]">
-          <SectionHeader>Contact</SectionHeader>
+          <SectionHeader id="contact">Contact</SectionHeader>
         </div>
       </main>
       <Footer />
