@@ -9,7 +9,7 @@ interface Props {
 
 const SocialLink = ({ icon, href, title }: Props) => {
   return (
-    <li className="w-8 hover:scale-125 hover:text-violet-400 transition-all duration-200">
+    <li className="w-8 text-pink-600 hover:scale-125 hover:text-white transition-all duration-200">
       <a href={href} target="_blank" title={title}>
         <FontAwesomeIcon size="lg" icon={icon} />
       </a>
