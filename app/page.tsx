@@ -3,6 +3,7 @@ import SocialLinkList from "@/components/header/SocialLinkList";
 import Navbar from "@/components/navbar/Navbar";
 import SectionContainer from "@/components/sections/SectionContainer";
 import SectionHeader from "@/components/sections/SectionHeader";
+import SkillBadge from "@/components/skills/SkillBadge";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -67,7 +68,16 @@ const Home = () => {
           </div>
         </SectionContainer>
         <SectionContainer className="mt-[5em] lg:mt-[15em]">
-          <SectionHeader id="skills">Skills</SectionHeader>
+          <div className="flex justify-start items-center lg:w-[20%] lg:justify-center">
+            <SectionHeader id="skills">Skills</SectionHeader>
+          </div>
+          <div className="flex gap-3">
+            <SkillBadge />
+            <SkillBadge />
+            <SkillBadge />
+            <SkillBadge />
+            <SkillBadge />
+          </div>
         </SectionContainer>
         <SectionContainer className="mt-[5em] lg:mt-[15em]">
           <SectionHeader id="experience">Experience</SectionHeader>
