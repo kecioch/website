@@ -3,7 +3,7 @@ import SocialLinkList from "@/components/header/SocialLinkList";
 import Navbar from "@/components/navbar/Navbar";
 import SectionContainer from "@/components/sections/SectionContainer";
 import SectionHeader from "@/components/sections/SectionHeader";
-import SkillBadge from "@/components/skills/SkillBadge";
+import SkillSection from "@/components/sections/SkillSection";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -14,7 +14,7 @@ const Home = () => {
       <main className="w-full max-w-5xl px-5 lg:px-10 mb-[15em]">
         <header className="mt-[5em] lg:mt-[8em]">
           <h2 className="uppercase text-2xl text-pink-700">Fullstack</h2>
-          <h1 className="uppercase text-4xl mb-4">Software-Engineer</h1>
+          <h1 className="uppercase text-4xl mb-4">Software Engineer</h1>
           <SocialLinkList />
           <div className="mt-10">
             <a href="#contact">
@@ -67,18 +67,7 @@ const Home = () => {
             </div>
           </div>
         </SectionContainer>
-        <SectionContainer className="mt-[5em] lg:mt-[15em]">
-          <div className="flex justify-start items-center lg:w-[20%] lg:justify-center">
-            <SectionHeader id="skills">Skills</SectionHeader>
-          </div>
-          <div className="flex gap-3">
-            <SkillBadge />
-            <SkillBadge />
-            <SkillBadge />
-            <SkillBadge />
-            <SkillBadge />
-          </div>
-        </SectionContainer>
+        <SkillSection className="mt-[5em] lg:mt-[15em]" />
         <SectionContainer className="mt-[5em] lg:mt-[15em]">
           <SectionHeader id="experience">Experience</SectionHeader>
         </SectionContainer>

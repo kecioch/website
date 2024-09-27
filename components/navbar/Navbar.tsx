@@ -10,7 +10,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full flex justify-center pt-7 lg:pt-16 pb-5 uppercase sticky top-0 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border-b border-purple-950 border-opacity-50 lg:border-none">
+    <nav className="w-full z-20 flex justify-center pt-7 lg:pt-16 pb-5 uppercase sticky top-0 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border-b border-purple-950 border-opacity-50 lg:border-none">
       <div className="w-full max-w-5xl px-5 lg:px-10 flex justify-between">
         <p className="font-bold text-xl">Kevin Cioch</p>
         <ul className="gap-8 font-light hidden lg:flex">
