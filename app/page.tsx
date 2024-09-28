@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import SocialLinkList from "@/components/header/SocialLinkList";
 import Navbar from "@/components/navbar/Navbar";
+import ExperienceSection from "@/components/sections/ExperienceSection";
 import SectionContainer from "@/components/sections/SectionContainer";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SkillSection from "@/components/sections/SkillSection";
@@ -68,9 +69,7 @@ const Home = () => {
           </div>
         </SectionContainer>
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
-        <SectionContainer className="mt-[5em] lg:mt-[15em]">
-          <SectionHeader id="experience">Experience</SectionHeader>
-        </SectionContainer>
+        <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
         <SectionContainer className="mt-[5em] lg:mt-[15em]">
           <SectionHeader id="contact">Contact</SectionHeader>
         </SectionContainer>
