@@ -30,13 +30,13 @@ const Home = () => {
           </div>
           <div className="flex-1">
             <p className="text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              quisquam fugit recusandae molestias. Maiores cupiditate deleniti,
-              provident totam incidunt minima veritatis, explicabo qui aliquam
-              quod pariatur, eaque quisquam ducimus? Fugiat! Quidem, maxime quae
-              cum porro, velit iure libero mollitia qui nisi, quo minima
-              explicabo et quibusdam perspiciatis ullam obcaecati aut adipisci.
-              Accusamus eius maxime totam possimus veniam rerum minima maiores.
+              Welcome!
+              <br />
+              I&apos;m Kevin Cioch, a software engineer based in Lüdenscheid,
+              Germany. I specialize in full-stack web technologies with a strong
+              passion for frontend development. I love exploring new tech trends
+              and working on hobby projects in my spare time. Dive in to see how
+              I bring ideas to life through code!
             </p>
           </div>
         </SectionContainer>
