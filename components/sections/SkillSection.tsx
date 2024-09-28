@@ -19,6 +19,7 @@ const SkillSection = ({ className }: Props) => {
     { title: "CSS", iconPath: "/icons/css.png" },
     { title: "React", iconPath: "/icons/react.png" },
     { title: "Next.js", iconPath: "/icons/next.png" },
+    { title: "Express", iconPath: "/icons/express.png" },
     { title: "Tailwind", iconPath: "/icons/tailwind.png" },
     { title: "Bootstrap", iconPath: "/icons/bootstrap.png" },
     { title: "MySQL", iconPath: "/icons/mysql.png" },
