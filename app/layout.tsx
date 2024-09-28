@@ -34,7 +34,9 @@ export default function RootLayout({
           src="https://kit.fontawesome.com/1078e55ef0.js"
           crossOrigin="anonymous"
         />
-        {children}
+        <div className="background" />
+        <div className="gradient" />
+        <div className="main">{children}</div>
       </body>
     </html>
   );

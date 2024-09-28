@@ -2,11 +2,10 @@ import Footer from "@/components/footer/Footer";
 import SocialLinkList from "@/components/header/SocialLinkList";
 import Navbar from "@/components/navbar/Navbar";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 import SectionContainer from "@/components/sections/SectionContainer";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SkillSection from "@/components/sections/SkillSection";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   return (
@@ -41,33 +40,7 @@ const Home = () => {
             </p>
           </div>
         </SectionContainer>
-        <SectionContainer className="mt-[5em] lg:mt-[15em]">
-          <div className="flex justify-start items-center lg:w-[20%] lg:justify-center">
-            <SectionHeader id="projects">Projects</SectionHeader>
-          </div>
-          <div className="flex-1">
-            <div className="flex gap-3 flex-wrap justify-center">
-              <div className="w-full md:w-[45%] h-[15em] bg-purple-800"></div>
-              <div className="w-full md:w-[45%] h-[15em] bg-purple-800"></div>
-              <div className="w-full md:w-[45%] h-[15em] bg-purple-800"></div>
-              <div className="w-full md:w-[45%] h-[15em] bg-purple-800"></div>
-            </div>
-            <div className="mt-7 flex justify-center">
-              <a
-                href="https://www.github.com/kecioch"
-                target="_blank"
-                className="w-full md:w-auto"
-              >
-                <button className="w-full border p-4 rounded-xl uppercase transition-all duration-200 hover:scale-105 md:px-7">
-                  <span className="flex justify-center gap-2">
-                    See all repositories on Github
-                    <FontAwesomeIcon className="w-5 h-5" icon={faGithub} />
-                  </span>
-                </button>
-              </a>
-            </div>
-          </div>
-        </SectionContainer>
+        <ProjectsSection />
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
         <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
         <SectionContainer className="mt-[5em] lg:mt-[15em]">
