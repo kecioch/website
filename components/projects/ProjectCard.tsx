@@ -3,26 +3,33 @@ import ProjectTag from "./ProjectTag";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectCard = () => {
+export interface ProjectCardData {
+  title: string;
+  href: string;
+  coverSrc: string;
+  tags: string[];
+}
+
+const ProjectCard = ({ data }: { data: ProjectCardData }) => {
   return (
-    <Link href="/projects/teetasse" className="w-full md:w-[45%] min-h-[15em]">
-      <div className="border border-indigo-800 backdrop-blur-md rounded-xl overflow-hidden shadow-md transition-all hover:scale-105 test">
+    <Link href={data.href} className="w-full sm:w-[45%] min-h-[17em] flex">
+      <div className="border flex flex-col flex-1 border-indigo-800 backdrop-blur-md rounded-xl overflow-hidden shadow-md transition-all hover:scale-105">
         <div className="bg-slate-100 w-full h-[10em] relative">
           <Image
             // src="/projects/teetasse/screenshot-home.PNG"
-            src="/projects/weather-dashboard/weather-dashboard.PNG"
+            // src="/projects/weather-dashboard/weather-dashboard.PNG"
+            src={data.coverSrc}
             alt="cover"
             fill
             objectFit="cover"
           />
         </div>
-        <p className="uppercase text-xl px-2 pt-2">Teetasse</p>
-        <div className="flex gap-2 p-2 flex-wrap">
-          <ProjectTag>React</ProjectTag>
-          <ProjectTag>Next.js</ProjectTag>
-          <ProjectTag>Full-Stack</ProjectTag>
-          <ProjectTag>Webdev</ProjectTag>
-          <ProjectTag>MongoDB</ProjectTag>
+        <div className="flex-1">
+          <p className="uppercase text-lg px-2 pt-3">{data.title}</p>
+          <div className="flex gap-2 p-2 flex-wrap">
+            {data.tags &&
+              data.tags.map((tag, i) => <ProjectTag key={i}>{tag}</ProjectTag>)}
+          </div>
         </div>
       </div>
     </Link>

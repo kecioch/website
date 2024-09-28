@@ -3,9 +3,89 @@ import SectionContainer from "./SectionContainer";
 import SectionHeader from "./SectionHeader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import ProjectCard from "../projects/ProjectCard";
+import ProjectCard, { ProjectCardData } from "../projects/ProjectCard";
 
 const ProjectsSection = () => {
+  const PROJECTS: ProjectCardData[] = [
+    {
+      title: "Weather Dashboard",
+      coverSrc: "/projects/weather-dashboard/weather-dashboard.png",
+      href: "/projects/weather-dashboard",
+      tags: [
+        "frontend",
+        "js",
+        "react",
+        "dashboard",
+        "weather-api",
+        "recharts",
+        "minimalistic",
+      ],
+    },
+    {
+      title: "Teetasse",
+      coverSrc: "/projects/teetasse/screenshot-home.PNG",
+      href: "/projects/teetasse",
+      tags: [
+        "fullstack",
+        "ts",
+        "next.js",
+        "e-commerce",
+        "postgres",
+        "stripe",
+        "cloudinary",
+        "auth",
+        "seo",
+      ],
+    },
+    {
+      title: "Showtime",
+      coverSrc: "/projects/showtime/home.PNG",
+      href: "/projects/showtime",
+      tags: [
+        "fullstack",
+        "js",
+        "react",
+        "ticket-booking",
+        "express",
+        "jwt",
+        "mongodb",
+        "auth",
+        "stripe",
+      ],
+    },
+    {
+      title: "Sorting Visualizer",
+      coverSrc: "/projects/sorting-visualizer/sv-cover.png",
+      href: "/projects/sorting-visualizer",
+      tags: [
+        "frontend",
+        "js",
+        "react",
+        "sorting",
+        "bootstrap",
+        "selection",
+        "quick",
+        "bubble",
+        "merge",
+        "configurable"
+      ],
+    },
+    {
+      title: "Pathfinding Visualizer",
+      coverSrc: "/projects/pathfinding-visualizer/PV-Screenshot-1.png",
+      href: "/projects/pathfinding-visualizer",
+      tags: [
+        "c#",
+        "winforms",
+        "pathfinding",
+        "astar",
+        "dijkstra",
+        "configurable",
+        "analyze"
+      ],
+    },
+  ];
+
   return (
     <SectionContainer className="mt-[5em] lg:mt-[15em]">
       <div className="flex justify-start items-start lg:w-[20%] lg:justify-center">
@@ -13,9 +93,9 @@ const ProjectsSection = () => {
       </div>
       <div className="flex-1">
         <div className="flex gap-5 flex-wrap justify-center">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {PROJECTS.map((project, i) => (
+            <ProjectCard data={project} key={i} />
+          ))}
         </div>
         <div className="mt-7 flex justify-center">
           <a
