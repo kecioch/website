@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import SocialLinkList from "@/components/header/SocialLinkList";
 import Navbar from "@/components/navbar/Navbar";
+import ContactSection from "@/components/sections/ContactSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SectionContainer from "@/components/sections/SectionContainer";
@@ -11,7 +12,7 @@ const Home = () => {
   return (
     <div className="w-full flex flex-col items-center">
       <Navbar />
-      <main className="w-full max-w-5xl px-5 lg:px-10 mb-[15em]">
+      <main className="w-full max-w-5xl px-5 lg:px-10 mb-[5em]">
         <header className="mt-[5em] lg:mt-[8em]">
           <h2 className="uppercase text-2xl text-pink-700">Fullstack</h2>
           <h1 className="uppercase text-4xl mb-4">Software Engineer</h1>
@@ -43,9 +44,7 @@ const Home = () => {
         <ProjectsSection />
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
         <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
-        <SectionContainer className="mt-[5em] lg:mt-[15em]">
-          <SectionHeader id="contact">Contact</SectionHeader>
-        </SectionContainer>
+        <ContactSection className="mt-[5em] lg:mt-[15em]" />
       </main>
       <Footer />
     </div>

@@ -32,7 +32,7 @@ const SkillSection = ({ className }: Props) => {
       <div className="flex justify-start items-center lg:w-[20%] lg:justify-center">
         <SectionHeader id="skills">Skills</SectionHeader>
       </div>
-      <div className="flex gap-10 flex-wrap justify-center">
+      <div className="flex gap-y-5 gap-x-10 md:gap-y-10 flex-wrap justify-center">
         {SKILLS.map((skill, i) => (
           <SkillBadge key={i} title={skill.title} iconPath={skill.iconPath} />
         ))}
