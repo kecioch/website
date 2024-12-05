@@ -6,17 +6,11 @@ import FormInput from "../form/FormInput";
 import FormTextarea from "../form/FormTextarea";
 import { sendMail } from "@/services/mail/Nodemailer";
 import LoadingSpinner from "../ui/LoadingSpinner";
-import Toast, { ToastType } from "../ui/Toast";
+import Toast, { ToastConfig } from "../ui/Toast";
 
 interface FormInput {
   email: string;
   subject: string;
-  message: string;
-}
-
-interface ToastConfig {
-  show: boolean;
-  type: ToastType;
   message: string;
 }
 
@@ -28,22 +22,17 @@ const ContactForm = () => {
     reset,
   } = useForm<FormInput>();
   const [isSending, setIsSending] = useState(false);
-  const [toastConfig, setToastConfig] = useState<ToastConfig>({
-    show: true,
-    type: "success",
-    message: "Message was successfully sent!",
-  });
+  const [toastConfig, setToastConfig] = useState<ToastConfig>({ show: false });
 
   const submitHandler: SubmitHandler<FormInput> = async (data) => {
-    console.log(data);
     setIsSending(true);
     const resultMail = await sendMail({
       senderEmail: data.email,
       subject: data.subject,
       message: data.message,
     });
-    console.log("result: ", resultMail);
     setIsSending(false);
+    
     if (resultMail?.messageId) {
       setToastConfig({
         show: true,
@@ -60,10 +49,22 @@ const ContactForm = () => {
     }
   };
 
+  const handleCloseToast = () => {
+    setToastConfig((prev) => {
+      return { ...prev, show: false };
+    });
+  };
+
   return (
     <div className="w-full md:w-[30em] min-h-72 bg-opacity-40 bg-indigo-950 rounded-lg overflow-hidden shadow-lg">
       {toastConfig?.show && (
-        <Toast type={toastConfig.type}>{toastConfig.message}</Toast>
+        <Toast
+          type={toastConfig.type}
+          timeout={toastConfig.timeout}
+          onClose={handleCloseToast}
+        >
+          {toastConfig.message}
+        </Toast>
       )}
       <form
         className="p-5 flex flex-col gap-8 mt-3"
