@@ -1,13 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import FormInput from "../form/FormInput";
 import FormTextarea from "../form/FormTextarea";
+import { sendMail } from "@/services/mail/Nodemailer";
+import LoadingSpinner from "../ui/LoadingSpinner";
+import Toast, { ToastType } from "../ui/Toast";
 
-interface IFormInput {
+interface FormInput {
   email: string;
   subject: string;
+  message: string;
+}
+
+interface ToastConfig {
+  show: boolean;
+  type: ToastType;
   message: string;
 }
 
@@ -17,15 +26,45 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<IFormInput>();
+  } = useForm<FormInput>();
+  const [isSending, setIsSending] = useState(false);
+  const [toastConfig, setToastConfig] = useState<ToastConfig>({
+    show: true,
+    type: "success",
+    message: "Message was successfully sent!",
+  });
 
-  const submitHandler: SubmitHandler<IFormInput> = (data) => {
+  const submitHandler: SubmitHandler<FormInput> = async (data) => {
     console.log(data);
-    reset();
+    setIsSending(true);
+    const resultMail = await sendMail({
+      senderEmail: data.email,
+      subject: data.subject,
+      message: data.message,
+    });
+    console.log("result: ", resultMail);
+    setIsSending(false);
+    if (resultMail?.messageId) {
+      setToastConfig({
+        show: true,
+        type: "success",
+        message: "Message was successfully sent!",
+      });
+      reset();
+    } else {
+      setToastConfig({
+        show: true,
+        type: "error",
+        message: "An unexpected error occured!",
+      });
+    }
   };
 
   return (
     <div className="w-full md:w-[30em] min-h-72 bg-opacity-40 bg-indigo-950 rounded-lg overflow-hidden shadow-lg">
+      {toastConfig?.show && (
+        <Toast type={toastConfig.type}>{toastConfig.message}</Toast>
+      )}
       <form
         className="p-5 flex flex-col gap-8 mt-3"
         onSubmit={handleSubmit(submitHandler)}
@@ -36,6 +75,7 @@ const ContactForm = () => {
           label="E-Mail"
           placeholder="E-Mail"
           error={errors.email}
+          disabled={isSending}
           register={register("email", {
             required: "Required",
             pattern: {
@@ -50,6 +90,7 @@ const ContactForm = () => {
           label="Subject"
           placeholder="Subject"
           error={errors.subject}
+          disabled={isSending}
           register={register("subject", { required: "Required" })}
         />
         <FormTextarea
@@ -57,10 +98,21 @@ const ContactForm = () => {
           label="Message"
           placeholder=""
           error={errors.message}
+          disabled={isSending}
           register={register("message", { required: "Required" })}
         />
-        <button className="bg-indigo-800 p-2 rounded-md transition-all hover:bg-indigo-700">
-          Send
+        <button
+          className={`p-2 rounded-md transition-all ${
+            isSending
+              ? "bg-indigo-900 cursor-not-allowed"
+              : "bg-indigo-800 hover:bg-indigo-700"
+          }`}
+          disabled={isSending}
+        >
+          <span className="flex justify-center items-center gap-2">
+            {isSending ? "Sending message" : "Send"}
+            {isSending && <LoadingSpinner />}
+          </span>
         </button>
       </form>
     </div>

@@ -10,9 +10,17 @@ interface Props {
   label: string;
   error: FieldError | undefined;
   register: UseFormRegisterReturn;
+  disabled?: boolean;
 }
 
-const FormTextarea = ({ id, label, placeholder, error, register }: Props) => {
+const FormTextarea = ({
+  id,
+  label,
+  placeholder,
+  error,
+  register,
+  disabled,
+}: Props) => {
   return (
     <div className="flex flex-col gap-1 mb-1">
       <label
@@ -24,6 +32,7 @@ const FormTextarea = ({ id, label, placeholder, error, register }: Props) => {
       <textarea
         id={id}
         placeholder={placeholder}
+        disabled={disabled}
         className={`py-1 px-2 min-h-32 bg-transparent border-[0.1em] rounded-md focus:border-indigo-700 focus:outline-none ${
           error ? "border-red-700 text-red-700" : "border-slate-400 "
         }`}

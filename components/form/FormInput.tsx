@@ -11,6 +11,7 @@ interface Props {
   label: string;
   error: FieldError | undefined;
   register: UseFormRegisterReturn;
+  disabled?: boolean;
 }
 
 const FormInput = ({
@@ -20,6 +21,7 @@ const FormInput = ({
   label,
   error,
   register,
+  disabled
 }: Props) => {
   return (
     <div className="relative">
@@ -30,6 +32,7 @@ const FormInput = ({
           error ? "border-red-700 text-red-700" : "border-slate-400"
         }`}
         placeholder={placeholder}
+        disabled={disabled}
         {...register}
       />
       <label
