@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="w-full flex flex-col items-center">
       <Navbar />
-      <main className="w-full max-w-5xl px-5 lg:px-10 mb-[5em]">
+      <main className="w-full max-w-5xl px-5 lg:px-10 md:mb-[5em]">
         <header className="mt-[5em] lg:mt-[8em]">
           <h2 className="uppercase text-2xl text-pink-700">Fullstack</h2>
           <h1 className="uppercase text-4xl mb-4">Software Engineer</h1>
@@ -30,7 +30,7 @@ const Home = () => {
             <SectionHeader id="about">About</SectionHeader>
           </div>
           <div className="flex-1">
-            <p className="text-justify">
+            <p className="text-justify text-2xl font-thin">
               Welcome!
               <br />
               I&apos;m Kevin Cioch, a software engineer based in Lüdenscheid,
@@ -44,7 +44,7 @@ const Home = () => {
         <ProjectsSection />
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
         <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
-        <ContactSection className="mt-[5em] lg:mt-[15em]" />
+        <ContactSection className="mt-[5em] mb-12 lg:mt-[15em]" />
       </main>
       <Footer />
     </div>

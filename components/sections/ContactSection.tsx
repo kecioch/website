@@ -16,8 +16,8 @@ const ContactSection = ({ className }: Props) => {
       <SectionHeader id="contact">Contact</SectionHeader>
       <div className="flex gap-5 flex-col md:flex-row">
         <ContactForm />
-        <div className="h-72 flex justify-center p-3">
-          <div className="flex flex-col gap-6">
+        <div className="flex justify-center p-3 mt-10 md:mt-0">
+          <div className="flex flex-col gap-8">
             <ContactLink href="mailto:contact@kevincioch.com" icon={faEnvelope}>
               contact@kevincioch.com
             </ContactLink>
