@@ -7,10 +7,12 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import SectionContainer from "@/components/sections/SectionContainer";
 import SectionHeader from "@/components/sections/SectionHeader";
 import SkillSection from "@/components/sections/SkillSection";
+import { faArrowAltCircleUp, faArrowTurnUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center" id="home">
       <Navbar />
       <main className="w-full max-w-5xl px-5 lg:px-10 md:mb-[5em]">
         <header className="mt-[5em] lg:mt-[8em]">
@@ -45,6 +47,11 @@ const Home = () => {
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
         <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
         <ContactSection className="mt-[5em] mb-12 lg:mt-[15em]" />
+        <button>
+          <a href="#home">
+            <FontAwesomeIcon icon={faArrowTurnUp} />
+          </a>
+        </button>
       </main>
       <Footer />
     </div>

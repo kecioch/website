@@ -26,7 +26,11 @@ const Menu = ({ links, onClose }: Props) => {
           !show && "-translate-y-40 opacity-0"
         }`}
       >
-        <button className="top-5 right-5 absolute" onClick={onClose}>
+        <button
+          className="top-5 right-5 absolute"
+          title="Close menu"
+          onClick={onClose}
+        >
           <FontAwesomeIcon icon={faX} className="w-6 h-6 text-black" />
         </button>
         <ul className="font-light text-black flex flex-col gap-3">
