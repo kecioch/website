@@ -23,7 +23,7 @@ const send = async (mail: Mail) => {
     to: process.env.NODEMAILER_SEND_TO,
     priority: "high",
     subject: "Kontaktformular | " + mail.subject,
-    text: `E-Mail: ${mail.senderEmail} \nNachricht:\n${mail.message}`,
+    text: `E-Mail: ${mail.senderEmail}\nBetreff: ${mail.subject}\nNachricht:\n${mail.message}`,
   });
 
   console.log("Mail sent: %s", info.messageId);
