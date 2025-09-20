@@ -8,6 +8,12 @@ import ProjectCard, { ProjectCardData } from "../projects/ProjectCard";
 const ProjectsSection = () => {
   const PROJECTS: ProjectCardData[] = [
     {
+      title: "Enigma",
+      coverSrc: "/projects/weather-dashboard/weather-dashboard.png",
+      href: "/projects/weather-dashboard",
+      tags: ["frontend", "js", "react", "enigma", "encryption", "decryption"],
+    },
+    {
       title: "Weather Dashboard",
       coverSrc: "/projects/weather-dashboard/weather-dashboard.png",
       href: "/projects/weather-dashboard",
@@ -67,7 +73,7 @@ const ProjectsSection = () => {
         "quick",
         "bubble",
         "merge",
-        "configurable"
+        "configurable",
       ],
     },
     {
@@ -81,7 +87,7 @@ const ProjectsSection = () => {
         "astar",
         "dijkstra",
         "configurable",
-        "analyze"
+        "analyze",
       ],
     },
   ];
