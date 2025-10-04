@@ -9,8 +9,8 @@ const ProjectsSection = () => {
   const PROJECTS: ProjectCardData[] = [
     {
       title: "Enigma",
-      coverSrc: "/projects/weather-dashboard/weather-dashboard.png",
-      href: "/projects/weather-dashboard",
+      coverSrc: "/projects/enigma/screenshot-enigma.png",
+      href: "/projects/enigma",
       tags: ["frontend", "js", "react", "enigma", "encryption", "decryption"],
     },
     {
