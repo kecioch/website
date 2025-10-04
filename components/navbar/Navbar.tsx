@@ -7,12 +7,15 @@ import { useState } from "react";
 import Menu from "./Menu";
 
 const LINKS: NavLinkData[] = [
-  { title: "About", href: "#about" },
-  { title: "Projects", href: "#projects" },
-  { title: "Skills", href: "#skills" },
-  { title: "Experience", href: "#experience" },
-  { title: "Contact", href: "#contact" },
+  { title: "About", hrefID: "about" },
+  { title: "Projects", hrefID: "projects" },
+  { title: "Skills", hrefID: "skills" },
+  { title: "Experience", hrefID: "experience" },
+  { title: "Contact", hrefID: "contact" },
 ];
+
+const SCROLLOFFSET_DESKTOP = 100;
+const NAVBAR_ID = "nav";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,13 +35,20 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full z-20 flex justify-center pt-7 lg:pt-16 pb-5 uppercase sticky top-0 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border-b border-purple-950 border-opacity-50 lg:border-none">
+      <nav
+        id={NAVBAR_ID}
+        className="w-full z-20 flex justify-center pt-7 lg:pt-16 pb-5 uppercase sticky top-0 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 border-b border-purple-950 border-opacity-50 lg:border-none"
+      >
         <div className="w-full max-w-5xl px-5 lg:px-10 flex justify-between">
           <p className="font-bold text-xl">Kevin Cioch</p>
           <ul className="gap-8 font-light hidden lg:flex">
             {LINKS.map((link, index) => (
               <li key={index}>
-                <NavLink data={link} />
+                <NavLink
+                  data={link}
+                  navBarID={NAVBAR_ID}
+                  scrollOffset={SCROLLOFFSET_DESKTOP}
+                />
               </li>
             ))}
           </ul>
@@ -50,7 +60,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      {showMenu && <Menu links={LINKS} onClose={handleCloseMenu} />}
+      {showMenu && <Menu links={LINKS} navBarID={NAVBAR_ID} onClose={handleCloseMenu} />}
     </>
   );
 };

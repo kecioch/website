@@ -5,10 +5,13 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   links: NavLinkData[];
+  navBarID: string;
   onClose: () => void;
 }
 
-const Menu = ({ links, onClose }: Props) => {
+const SCROLLOFFSET_MOBILE = 50;
+
+const Menu = ({ links, navBarID, onClose }: Props) => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -36,7 +39,12 @@ const Menu = ({ links, onClose }: Props) => {
         <ul className="font-light text-black flex flex-col gap-3">
           {links.map((link, index) => (
             <li key={index} className="text-center">
-              <NavLink data={link} onClick={onClose} />
+              <NavLink
+                data={link}
+                onClick={onClose}
+                navBarID={navBarID}
+                scrollOffset={SCROLLOFFSET_MOBILE}
+              />
             </li>
           ))}
         </ul>
