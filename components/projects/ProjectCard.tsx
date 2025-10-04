@@ -21,7 +21,8 @@ const ProjectCard = ({ data }: { data: ProjectCardData }) => {
             src={data.coverSrc}
             alt="cover"
             fill
-            objectFit="cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            // objectFit="cover"
           />
         </div>
         <div className="flex-1">
