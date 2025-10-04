@@ -3,7 +3,7 @@ import SocialLink from "./SocialLink";
 
 const SocialLinkList = () => {
   return (
-    <ul className="flex gap-5">
+    <ul className="flex gap-5 text-2xl">
       <SocialLink
         icon={faGithub}
         href="https://www.github.com/kecioch"
