@@ -20,7 +20,7 @@ const ExperienceItem = ({
   return (
     <div className="flex gap-5">
       <div className="min-w-24">
-        <p className="text-slate-400">
+        <p className="text-slate-300">
           {dateFrom} - {dateTo}
         </p>
       </div>
