@@ -9,7 +9,7 @@ const HeaderSection = ({ className }: Props) => {
   return (
     <header className={className}>
       <h2 className="uppercase text-2xl lg:text-3xl mb-2 text-pink-700">Fullstack</h2>
-      <h1 className="uppercase text-4xl lg:text-5xl mb-4">Software Engineer</h1>
+      <h1 className="uppercase text-3xl sm:text-4xl lg:text-5xl mb-4">Software Engineer</h1>
       <SocialLinkList />
       <div className="mt-10">
         <a href="#contact">

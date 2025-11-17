@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectTag from "./ProjectTag";
 import Image from "next/image";
-import Link from "next/link";
 
 export interface ProjectCardData {
   title: string;
@@ -12,12 +11,10 @@ export interface ProjectCardData {
 
 const ProjectCard = ({ data }: { data: ProjectCardData }) => {
   return (
-    <Link href={data.href} className="w-full sm:w-[45%] min-h-[17em] flex">
+    <a href={data.href} target="_blank" className="w-full sm:w-[45%] min-h-[17em] flex">
       <div className="border flex flex-col flex-1 border-indigo-800 backdrop-blur-md rounded-xl overflow-hidden shadow-md transition-all hover:scale-105">
         <div className="bg-slate-100 w-full h-[10em] relative">
           <Image
-            // src="/projects/teetasse/screenshot-home.PNG"
-            // src="/projects/weather-dashboard/weather-dashboard.PNG"
             src={data.coverSrc}
             alt="cover"
             fill
@@ -34,7 +31,7 @@ const ProjectCard = ({ data }: { data: ProjectCardData }) => {
           </div>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: "Kevin Cioch",
   description: "Personal Portfolio Website",
   authors: [{ name: "Kevin Cioch", url: "https://www.kevincioch.com" }],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

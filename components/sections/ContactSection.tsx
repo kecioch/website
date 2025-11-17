@@ -14,7 +14,7 @@ const ContactSection = ({ className }: Props) => {
   return (
     <SectionContainer className={className}>
       <SectionHeader id="contact">Contact</SectionHeader>
-      <div className="flex gap-5 flex-col px-10 md:flex-row">
+      <div className="flex gap-5 flex-col sm:px-10 md:flex-row">
         <ContactForm />
         <div className="flex justify-center p-3 mt-10 md:mt-0">
           <div className="flex flex-col gap-8">

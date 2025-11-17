@@ -13,8 +13,8 @@ const AboutSection = ({ className }: Props) => {
         <SectionHeader id="about">About</SectionHeader>
       </div>
       <div className="flex-1">
-        <p className="text-justify text-2xl font-thin px-10">
-          Welcome!
+        <p className="text-justify text-2xl lg:text-3xl font-thin sm:px-10">
+          Hello!
           <br />
           I&apos;m Kevin Cioch, a software engineer based in Lüdenscheid,
           Germany. I specialize in full-stack web technologies with a strong

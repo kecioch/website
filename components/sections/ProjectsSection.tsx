@@ -10,13 +10,13 @@ const ProjectsSection = () => {
     {
       title: "Enigma",
       coverSrc: "/projects/enigma/screenshot-enigma.png",
-      href: "/projects/enigma",
+      href: "https://github.com/kecioch/enigma",
       tags: ["frontend", "js", "react", "enigma", "encryption", "decryption"],
     },
     {
       title: "Weather Dashboard",
       coverSrc: "/projects/weather-dashboard/weather-dashboard.png",
-      href: "/projects/weather-dashboard",
+      href: "https://github.com/kecioch/weather-dashboard",
       tags: [
         "frontend",
         "js",
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
     {
       title: "Teetasse",
       coverSrc: "/projects/teetasse/screenshot-home.PNG",
-      href: "/projects/teetasse",
+      href: "https://github.com/kecioch/teetasse",
       tags: [
         "fullstack",
         "ts",
@@ -46,7 +46,7 @@ const ProjectsSection = () => {
     {
       title: "Showtime",
       coverSrc: "/projects/showtime/home.PNG",
-      href: "/projects/showtime",
+      href: "https://github.com/kecioch/showtime",
       tags: [
         "fullstack",
         "js",
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
     {
       title: "Sorting Visualizer",
       coverSrc: "/projects/sorting-visualizer/sv-cover.png",
-      href: "/projects/sorting-visualizer",
+      href: "https://github.com/kecioch/sorting-visualizer",
       tags: [
         "frontend",
         "js",
@@ -79,7 +79,7 @@ const ProjectsSection = () => {
     {
       title: "Pathfinding Visualizer",
       coverSrc: "/projects/pathfinding-visualizer/PV-Screenshot-1.png",
-      href: "/projects/pathfinding-visualizer",
+      href: "https://github.com/kecioch/pathfinding-visualizer",
       tags: [
         "c#",
         "winforms",
@@ -98,7 +98,7 @@ const ProjectsSection = () => {
         <SectionHeader id="projects">Projects</SectionHeader>
       </div>
       <div className="flex-1">
-        <div className="flex gap-5 flex-wrap justify-center">
+        <div className="flex gap-7 md:gap-5 flex-wrap justify-center">
           {PROJECTS.map((project, i) => (
             <ProjectCard data={project} key={i} />
           ))}
