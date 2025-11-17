@@ -36,14 +36,15 @@ const ExperienceSection = ({ className }: Props) => {
       children: (
         <p>
           <LinkIcon
-            href="/projects/teetasse"
+            href="https://github.com/kecioch/teetasse"
+            target="_blank"
             faIconName="fa-solid fa-arrow-up-right-from-square"
           >
             Thesis
           </LinkIcon>{" "}
           focused on developing an e-commerce platform using Next.js, with an
           emphasis on optimizing and analyzing SEO factors and web rendering
-          technologies
+          technologies.
         </p>
       ),
     },

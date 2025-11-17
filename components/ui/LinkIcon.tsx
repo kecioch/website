@@ -6,13 +6,21 @@ interface Props {
   faIconName: string;
   children?: React.ReactNode;
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
-const LinkIcon = ({ href, children, className, faIconName }: Props) => {
+const LinkIcon = ({
+  href,
+  children,
+  className,
+  faIconName,
+  target = "_self",
+}: Props) => {
   return (
     <Link
       className={`transition-all hover:text-cyan-700 ${className}`}
       href={href}
+      target={target}
     >
       {children} <i className={faIconName} />
     </Link>
