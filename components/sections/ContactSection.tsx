@@ -25,7 +25,7 @@ const ContactSection = ({ className }: Props) => {
               href="https://linkedin.com/in/kecioch"
               icon={faLinkedin}
             >
-              /in/kecioch
+            /in/kecioch
             </ContactLink>
             <ContactLink href="https://github.com/kecioch" icon={faGithub}>
               /kecioch

@@ -1,4 +1,5 @@
 import React from "react";
+import * as motion from "motion/react-client";
 
 interface Props {
   value: number;
@@ -10,7 +11,16 @@ const ProgressBar = ({ value, className }: Props) => {
     <div
       className={`bg-blue-950 rounded-lg min-w-40 min-h-3 overflow-hidden ${className}`}
     >
-      <div className={`bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-3`} style={{ width: `${value}%` }} />
+      <motion.div
+        className={`bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-3`}
+        // style={{ width: `${value}%` }}
+        initial={{ width: "0%" }}
+        transition={{ duration: 1.8 }}
+        whileInView={{
+          width: `${value}%`,
+        }}
+        viewport={{ once: true }}
+      />
       {/* <div className={`bg-pink-700 min-h-3`} style={{ width: `${value}%` }} /> */}
     </div>
   );

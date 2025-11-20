@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectTag from "./ProjectTag";
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 export interface ProjectCardData {
   title: string;
@@ -9,9 +10,40 @@ export interface ProjectCardData {
   tags: string[];
 }
 
-const ProjectCard = ({ data }: { data: ProjectCardData }) => {
+interface Props {
+  data: ProjectCardData;
+  animationDirection?: "left" | "right" | "top" | "bottom";
+}
+
+const ProjectCard = ({ data, animationDirection = "top" }: Props) => {
+  let yAnimOffset = 0;
+  if (animationDirection == "top") yAnimOffset = -100;
+  if (animationDirection == "bottom") yAnimOffset = 100;
+
+  let xAnimOffset = 0;
+  if (animationDirection == "left") xAnimOffset = -100;
+  if (animationDirection == "right") xAnimOffset = 100;
+
   return (
-    <a href={data.href} target="_blank" className="w-full sm:w-[45%] min-h-[17em] flex">
+    <motion.a
+      href={data.href}
+      target="_blank"
+      className="w-full sm:w-[45%] min-h-[17em] flex"
+      initial={{
+        opacity: 0,
+        scale: 0.9,
+        y: yAnimOffset,
+        x: xAnimOffset,
+      }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        x: 0,
+      }}
+      viewport={{ once: true, amount: 0.6 }}
+    >
       <div className="border flex flex-col flex-1 border-indigo-800 backdrop-blur-md rounded-xl overflow-hidden shadow-md transition-all hover:scale-105">
         <div className="bg-slate-100 w-full h-[10em] relative">
           <Image
@@ -31,7 +63,7 @@ const ProjectCard = ({ data }: { data: ProjectCardData }) => {
           </div>
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };
 

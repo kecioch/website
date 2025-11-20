@@ -100,7 +100,11 @@ const ProjectsSection = () => {
       <div className="flex-1">
         <div className="flex gap-7 md:gap-5 flex-wrap justify-center">
           {PROJECTS.map((project, i) => (
-            <ProjectCard data={project} key={i} />
+            <ProjectCard
+              key={i}
+              data={project}
+              animationDirection={i % 2 == 0 ? "left" : "right"}
+            />
           ))}
         </div>
         <div className="mt-7 flex justify-center">
