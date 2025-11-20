@@ -29,7 +29,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Teetasse",
-      coverSrc: "/projects/teetasse/screenshot-home.PNG",
+      coverSrc: "/projects/teetasse/screenshot-home.png",
       href: "https://github.com/kecioch/teetasse",
       tags: [
         "fullstack",
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Showtime",
-      coverSrc: "/projects/showtime/home.PNG",
+      coverSrc: "/projects/showtime/home.png",
       href: "https://github.com/kecioch/showtime",
       tags: [
         "fullstack",
