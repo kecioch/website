@@ -15,9 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kevin Cioch | Software Engineer",
+  title: "Kevin Cioch | Software Developer",
   description:
-    "I'm Kevin Cioch, a software engineer based in Lüdenscheid, Germany. I specialize in full-stack web technologies with a strong passion for frontend development.",
+    "I'm Kevin Cioch, a software developer based in Lüdenscheid, Germany. I specialize in full-stack web technologies with a strong passion for frontend development.",
   authors: [{ name: "Kevin Cioch", url: "https://www.kevincioch.com" }],
   keywords:
     "Kevin Cioch, kecioch, Software Engineer, Software Developer, Fullstack, Frontend, Backend, Portfolio, React, Next",
