@@ -98,7 +98,7 @@ const ProjectsSection = () => {
         <SectionHeader id="projects">Projects</SectionHeader>
       </div>
       <div className="flex-1">
-        <div className="flex gap-7 md:gap-5 flex-wrap justify-center overflow-hidden">
+        <div className="flex gap-7 md:gap-5 flex-wrap justify-center">
           {PROJECTS.map((project, i) => (
             <ProjectCard
               key={i}
