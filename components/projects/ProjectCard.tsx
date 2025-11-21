@@ -21,8 +21,8 @@ const ProjectCard = ({ data, animationDirection = "top" }: Props) => {
   if (animationDirection == "bottom") yAnimOffset = 100;
 
   let xAnimOffset = 0;
-  if (animationDirection == "left") xAnimOffset = -50;
-  if (animationDirection == "right") xAnimOffset = 50;
+  if (animationDirection == "left") xAnimOffset = -40;
+  if (animationDirection == "right") xAnimOffset = 40;
 
   return (
     <motion.a

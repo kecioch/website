@@ -15,7 +15,7 @@ const SectionContainer = ({ children, className }: Props) => {
     <motion.section
       className={`flex flex-col gap-10 lg:flex-row ${className}`}
       initial={{ opacity: 0, scale: 0.9, y: -100 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
       whileInView={{
         opacity: 1,
         scale: 1,
