@@ -114,7 +114,7 @@ const ProjectsSection = () => {
             className="w-full md:w-auto"
           >
             <button className="w-full border p-4 rounded-xl uppercase transition-all duration-200 hover:scale-105 md:px-7">
-              <span className="flex justify-center gap-2">
+              <span className="flex justify-center items-center gap-2 text-balance">
                 See all repositories on Github
                 <FontAwesomeIcon className="w-5 h-5" icon={faGithub} />
               </span>

@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import NavLink, { NavLinkData } from "./NavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import { SCROLLOFFSET_MOBILE } from "@/constants/layout";
 
 interface Props {
   links: NavLinkData[];
   navBarID: string;
   onClose: () => void;
 }
-
-const SCROLLOFFSET_MOBILE = 50;
 
 const Menu = ({ links, navBarID, onClose }: Props) => {
   const [show, setShow] = useState(false);
