@@ -5,6 +5,7 @@ import NavLink, { NavLinkData } from "./NavLink";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Menu from "./Menu";
+import { NAVBAR_ID, SCROLLOFFSET_DESKTOP } from "@/constants/layout";
 
 const LINKS: NavLinkData[] = [
   { title: "About", hrefID: "about" },
@@ -14,8 +15,6 @@ const LINKS: NavLinkData[] = [
   { title: "Contact", hrefID: "contact" },
 ];
 
-const SCROLLOFFSET_DESKTOP = 100;
-const NAVBAR_ID = "nav";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);

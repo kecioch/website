@@ -15,23 +15,15 @@
 }
 
 html {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  /* background-color: #2b5876;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);  */
-  background-color: #010a0e;
-  background-image: linear-gradient(-20deg, #061b25 0%, #37474f28 100%);
-  /* background-color: #2b2871;
-  background-image: linear-gradient(-20deg, #2b2871 0%, #1f1c4d 100%); */
-  background-attachment: fixed;
   scroll-behavior: smooth;
-  /* background-image: url("/background/grid.svg"); */
-  /* backdrop-filter: blur(50px); */
 }
 
-html, body {
+html,
+body {
   height: 100vh;
-  height: 100dvh;
+  background-color: #010a0e;
 }
 
 input:focus + label,
@@ -49,8 +41,10 @@ input:-webkit-autofill:focus {
 
 .background {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: fixed;
+  background-color: #010a0e;
+  background-image: linear-gradient(-20deg, #061b25 0%, #37474f28 100%);
 }
 
 .background:before {

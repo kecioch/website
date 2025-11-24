@@ -1,3 +1,5 @@
+import { useScrollToTarget } from "@/hooks/useScrollToTarget";
+
 export interface NavLinkData {
   title: string;
   hrefID: string;
@@ -10,24 +12,16 @@ interface Props {
   onClick?: () => void;
 }
 
-const NavLink = ({ data, navBarID, scrollOffset=0, onClick }: Props) => {
+const NavLink = ({ data, navBarID, scrollOffset = 0, onClick }: Props) => {
+  const scrollTo = useScrollToTarget({
+    navbarId: navBarID,
+    offset: scrollOffset,
+  });
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     onClick?.(); // calls callback method of parent to close menu modal in case of mobile view
-
-    const element = document.getElementById(data.hrefID);
-    const navBar = document.getElementById(navBarID);
-    if (!element || !navBar) return;
-
-    const elementPosition =
-      element.getBoundingClientRect().top + window.scrollY;
-    const offsetPosition =
-      elementPosition - navBar.offsetHeight - scrollOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+    scrollTo(data.hrefID);
   };
 
   return (
