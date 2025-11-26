@@ -2,7 +2,7 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import AboutSection from "@/components/sections/AboutSection";
 import ContactSection from "@/components/sections/ContactSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
+import EducationSection from "@/components/sections/EducationSection";
 import HeaderSection from "@/components/sections/HeaderSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillSection from "@/components/sections/SkillSection";
@@ -18,7 +18,7 @@ const Home = () => {
         <AboutSection className="mt-[7em] lg:mt-[15em]" />
         <ProjectsSection />
         <SkillSection className="mt-[5em] lg:mt-[15em]" />
-        <ExperienceSection className="mt-[5em] lg:mt-[15em]" />
+        <EducationSection className="mt-[5em] lg:mt-[15em]" />
         <ContactSection className="mt-[5em] mb-12 lg:mt-[15em]" />
         <div className="w-full flex justify-end">
           <button title="back to top">

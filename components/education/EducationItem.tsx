@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface ExperienceItemData {
+export interface EducationItemData {
   dateFrom: string;
   dateTo: string;
   location: string;
@@ -9,14 +9,14 @@ export interface ExperienceItemData {
   children?: React.ReactNode;
 }
 
-const ExperienceItem = ({
+const EducationItem = ({
   dateFrom,
   dateTo,
   location,
   title,
   subTitle,
   children,
-}: ExperienceItemData) => {
+}: EducationItemData) => {
   return (
     <div className="flex gap-5">
       <div className="min-w-24">
@@ -34,4 +34,4 @@ const ExperienceItem = ({
   );
 };
 
-export default ExperienceItem;
+export default EducationItem;
