@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -44,6 +45,7 @@ export default function RootLayout({
           src="https://kit.fontawesome.com/1078e55ef0.js"
           crossOrigin="anonymous"
         />
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || "NO_ID"} />
         <div className="background" />
         <div className="gradient" />
         <div className="main">{children}</div>

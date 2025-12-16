@@ -11,10 +11,9 @@ const LINKS: NavLinkData[] = [
   { title: "About", hrefID: "about" },
   { title: "Projects", hrefID: "projects" },
   { title: "Skills", hrefID: "skills" },
-  { title: "Experience", hrefID: "experience" },
+  { title: "Education", hrefID: "education" },
   { title: "Contact", hrefID: "contact" },
 ];
-
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
